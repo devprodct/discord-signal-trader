@@ -1,8 +1,4 @@
-const axiosInstance = require('../instance');
-const urlScheme = requrie('../scheme');
+import { axiosInstance } from '../instance.js';
+import { urlScheme } from '../scheme.js';
 
-const getMessagesFromDiscord = () => axiosInstance.get(urlScheme.channel);
-
-module.exports = {
-    getMessagesFromDiscord
-}
+export const getMessagesFromDiscord = () => axiosInstance.get(urlScheme.channel);

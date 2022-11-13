@@ -1,18 +1,18 @@
-const { stringExtractor } = require('./helper');
+import { stringExtractor } from './helper';
 
-
-const getEntryPrice = (str) => {
+export const getEntryPrice = (str) => {
     let entryPrice = stringExtractor(str, 'Entry:', '\\n')
 
     if (entryPrice) {
-        entryPrice = entryPrice.trim();
-        entryPrice
+        entryPrice = entryPrice.replace('$', '');
+        entryPrice = entryPrice.replace(',', '.').trim();
+        entryPrice = parseFloat(entryPrice);
     }
 
     return entryPrice;
 }
 
-const getSymbol = (str) => {
+export const getSymbol = (str) => {
     let symbol = stringExtractor(str, '$', '\\n')
 
     if (symbol) {
@@ -24,7 +24,7 @@ const getSymbol = (str) => {
     return symbol
 }
 
-const getTargetPrice = (str) => {
+export const getTargetPrice = (str) => {
     let targetPrice = stringExtractor(str, 'Target', '\\n')
 
     if (targetPrice) {
@@ -37,8 +37,8 @@ const getTargetPrice = (str) => {
     return targetPrice;
 }
 
-const getStopLossPrice = (str) => {
-    let stoploss = stringExtractor(str, 'Stoploss:', '\\n');
+export const getStopLossPrice = (str) => {
+    let stoploss = stringExtractor(str, 'Stoploss', '$|\n');
 
     if (stoploss) {
         stoploss = stoploss.replace(":", "").replace('$', '');
@@ -48,14 +48,6 @@ const getStopLossPrice = (str) => {
     return stoploss;
 }
 
-const getTradingType = (str) => {
+export const getTradingType = (str) => {
     return (str.match(/SELL/g) || str.match(/BUY/))[0];
-}
-
-module.exports = {
-    getEntryPrice,
-    getTargetPrice,
-    getStopLossPrice,
-    getTradingType,
-    getSymbol
 }

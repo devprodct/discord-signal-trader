@@ -1,14 +1,13 @@
-require('dotenv').config()
-const { schemePath, axiosInstance } = require('./api/api');
+import { Low } from 'lowdb'
 
-const {
-    getEntryPrice,
-    getSymbol,
-    getTargetPrice,
-    getStopLossPrice,
-    getTradingType
-} = require('./helpers/utilities');
+import { getJSONMessages } from './actions/discord.js';
 
-const client = require('./orders/order');
+// const client = require('./orders/order');
+// client.getPosition().then(res => res.result.filter(target => target.data.entry_price !== 0) );
 
-client.getPosition().then(res => res.result.filter(target => target.data.entry_price !== 0) );
+const app = async () => {
+
+    //const jsonMessages = await getJSONMessages();
+}
+
+app();
