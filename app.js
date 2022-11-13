@@ -4,12 +4,20 @@ import { addRecord } from "./actions/storage.js";
 
 const app = async () => {
 
+    // Get Messages from Channel 
     const jsonMessages = await getJSONMessages();
 
-    // Write records to DB
+    // Write and Check if record exist 
     jsonMessages.map(item => {
         addRecord(item);
     })
+
+    // Get positions from exchange
+
+    // Place order 
+
+    // Send Telegram Message
 }
 
-app();
+// set interval for 1 minute
+setInterval(app, 60000)
