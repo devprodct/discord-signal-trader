@@ -1,5 +1,4 @@
-import { Low } from 'lowdb'
-
+import "./config.js";
 import { getJSONMessages } from './actions/discord.js';
 
 // const client = require('./orders/order');
@@ -7,7 +6,7 @@ import { getJSONMessages } from './actions/discord.js';
 
 const app = async () => {
 
-    //const jsonMessages = await getJSONMessages();
+    const jsonMessages = await getJSONMessages();
 }
 
 app();

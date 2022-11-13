@@ -1,12 +1,12 @@
 import { getMessagesFromDiscord } from '../api/discord/discord.js';
 
-// import {
-//     getEntryPrice,
-//     getStopLossPrice,
-//     getSymbol,
-//     getTargetPrice,
-//     getTradingType
-// } from '../helpers/utilities'
+import {
+    getEntryPrice,
+    getStopLossPrice,
+    getSymbol,
+    getTargetPrice,
+    getTradingType
+} from '../helpers/utilities.js'
 
 export const getJSONMessages = async () => {
 
