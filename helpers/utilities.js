@@ -1,4 +1,4 @@
-import { stringExtractor } from './helper';
+import { stringExtractor } from './helper.js';
 
 export const getEntryPrice = (str) => {
     let entryPrice = stringExtractor(str, 'Entry:', '\\n')
