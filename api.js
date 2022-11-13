@@ -1,4 +1,5 @@
 const axios = require('axios');
+const { env } = require('process');
 
 const schemePath = {
     channel: 'channels/1016413603949195394/messages?limit=100'
@@ -9,7 +10,7 @@ const axiosInstance = axios.create({
     timeout: 12000,
     withCredentials: true,
     headers: {
-        'authorization' : 'OTQ1NzM3NTU2MDgxOTA1NzA0.GtVsIN.RHj5_uZKpIDsB3WkG_WtfNzJWcUTZGydCRjaYw'
+        'authorization' : env.WEB_DISCORD_TOKEN
     }
 });
 
