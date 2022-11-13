@@ -1,36 +1,40 @@
 const { schemePath, axiosInstance } = require('./api');
 
-const { 
-    getEntryPrice, 
-    getSymbol, 
-    getTargetPrice, 
+const {
+    getEntryPrice,
+    getSymbol,
+    getTargetPrice,
     getStopLossPrice,
     getTradingType
 } = require('./helpers/utilities');
 
-axiosInstance.get(schemePath.channel).then(resp => {
+const client = require('./order');
 
-    const content = resp.data.reverse().filter( item => {
-        return item.content.match(/SELL/g) || item.content.match(/BUY/);
-    })
+client.getPosition().then(res => console.log(res.result));
 
-    const parsed = content.map( item => {
+// axiosInstance.get(schemePath.channel).then(resp => {
 
-        const symbol        = getSymbol(item.content);
-        const entryPrice    = getEntryPrice(item.content);
-        const targetPrice   = getTargetPrice(item.content);
-        const stopLoss      = getStopLossPrice(item.content);
-        const tradingType   = getTradingType(item.content);
+//     const content = resp.data.reverse().filter(item => {
+//         return item.content.match(/SELL/g) || item.content.match(/BUY/);
+//     })
 
-        return {
-            symbol,
-            entryPrice,
-            targetPrice,
-            stopLoss,
-            tradingType,
-            //rawContent: item.content
-        }
-    });
+//     const parsed = content.map(item => {
 
-    parsed.map(item => console.log(item));
-})  
+//         const symbol = getSymbol(item.content);
+//         const entryPrice = getEntryPrice(item.content);
+//         const targetPrice = getTargetPrice(item.content);
+//         const stopLoss = getStopLossPrice(item.content);
+//         const tradingType = getTradingType(item.content);
+
+//         return {
+//             symbol,
+//             entryPrice,
+//             targetPrice,
+//             stopLoss,
+//             tradingType,
+//             rawContent: item.content
+//         }
+//     });
+
+//     //parsed.map(item => console.log(item));
+// })  
