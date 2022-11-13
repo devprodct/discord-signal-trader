@@ -1,5 +1,5 @@
 import { getMessagesFromDiscord } from '../api/discord/discord.js';
-
+import hash from 'object-hash';
 import {
     getEntryPrice,
     getStopLossPrice,
@@ -18,19 +18,25 @@ export const getJSONMessages = async () => {
 
     const parsed = content.map(item => {
 
-        const symbol = getSymbol(item.content);
-        const entryPrice = getEntryPrice(item.content);
-        const targetPrice = getTargetPrice(item.content);
-        const stopLoss = getStopLossPrice(item.content);
-        const tradingType = getTradingType(item.content);
+        const symbol        = getSymbol(item.content);
+        const entryPrice    = getEntryPrice(item.content);
+        const targetPrice   = getTargetPrice(item.content);
+        const stopLoss      = getStopLossPrice(item.content);
+        const tradingType   = getTradingType(item.content);
 
-        return {
+        const result = {
             symbol,
             entryPrice,
             targetPrice,
             stopLoss,
             tradingType,
+            timestamp: item.timestamp,
             rawContent: item.content
+        }
+
+        return {
+            ...result,
+            hash: hash(result)
         }
     });
 

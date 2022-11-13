@@ -14,18 +14,16 @@ const adapter       = new JSONFile(file)
 const db            = new LowWithLodash(adapter)
 
 db.data ||= { records: [] }
-db.read()
 
-export const update = () => db.write()
+await db.write()
+
+const writeDB = async () => await db.write()
 
 export const addRecord = async (record) => {
     db.data.records.push(record)
-    update()
+    writeDB()
 }
 
 export const addRecords = async (items) => {
-    items.map(item => {
-        addRecord(item)
-    })
-    update();
+    items.map(item => addRecord(item));
 }
