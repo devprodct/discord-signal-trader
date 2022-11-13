@@ -1,166 +1,6 @@
 {
   "records": [
     {
-      "symbol": "LUNA2",
-      "entryPrice": 2.393,
-      "targetPrice": 2.523,
-      "stopLoss": 2.33,
-      "tradingType": "BUY",
-      "timestamp": "2022-10-25T13:53:10.924000+00:00",
-      "rawContent": "$LUNA2\n(BUY/LONG) \n\n@everyone \n\nEntry: 2.393\n(Enter Now)\n\nLeverage: cross 10X <:greentick:925014592059490306>  \n\nTarget 1: 2.523 (55%)\nTarget 2: 2.743 (150%)\n\nRisking 2.5% to gain 15% on this trade (x10)\n\nStoploss: 2.330\n\nhttps://www.tradingview.com/x/ce8LmuTP/",
-      "hash": "b19683673ed77843f65287b600a05887d6b23447"
-    },
-    {
-      "symbol": "RSR",
-      "entryPrice": 0.00615,
-      "targetPrice": 0.00647,
-      "stopLoss": 0.00599,
-      "tradingType": "BUY",
-      "timestamp": "2022-10-26T17:47:13.450000+00:00",
-      "rawContent": "$RSR\n(BUY/LONG) \n\n@everyone \n\nEntry: 0.00615\n(Enter Now)\n\nLeverage: cross 10X <:greentick:925014592059490306>  \n\nTarget 1: 0.00647 (55%)\nTarget 2: 0.00671 (95%)\n\nRisking 2.4% to gain 9.5% on this trade (x10)\n\nStoploss: 0.00599\n\nhttps://www.tradingview.com/x/O62SjMK3/",
-      "hash": "96a90c9123ff318f76d4b9c17347f13c7973e539"
-    },
-    {
-      "symbol": "GALA",
-      "entryPrice": 0.0352,
-      "targetPrice": 0.0365,
-      "stopLoss": 0.0345,
-      "tradingType": "BUY",
-      "timestamp": "2022-10-27T17:36:19.158000+00:00",
-      "rawContent": "$GALA\n(BUY/LONG) \n\n@everyone \n\nEntry: 0.0352\n(Enter Now)\n\nLeverage: cross 10X <:greentick:925014592059490306>  \n\nTarget 1: 0.0365 (36%)\nTarget 2: 0.0374 (63%)\n\nRisking 2.1% to gain 6.3% on this trade (x10)\n\nStoploss: 0.0345\n\nhttps://www.tradingview.com/x/YVV3gmir/",
-      "hash": "a919009b89508bef9cc1dbb2e2d27fa279a3404c"
-    },
-    {
-      "symbol": "BTC",
-      "entryPrice": 20.29,
-      "targetPrice": 20.8,
-      "stopLoss": 19.945,
-      "tradingType": "BUY",
-      "timestamp": "2022-10-28T06:56:39.729000+00:00",
-      "rawContent": "$BTC\n(BUY/LONG) \n\n@everyone \n\nEntry: $20,290\n(Enter Now)\n\nLeverage: cross 10X <:greentick:925014592059490306>  \n\nTarget 1: $20,800 (25%)\nTarget 2: $21,280 (48%)\n\nRisking 1.7% to gain 4.8% on this trade (x10)\n\nStoploss: $19,945\n\nhttps://www.tradingview.com/x/gnYY5Kn2/",
-      "hash": "7d23e299368fcf0a2c868cd0a606b7ce049d92c0"
-    },
-    {
-      "symbol": "MATIC",
-      "entryPrice": 0.938,
-      "targetPrice": 0.9651,
-      "stopLoss": 0.9111,
-      "tradingType": "BUY",
-      "timestamp": "2022-10-28T16:26:32.931000+00:00",
-      "rawContent": "$MATIC\n(BUY/LONG) \n\n@everyone \n\nEntry: $0.9380\n(Enter Now)\n\nLeverage: cross 10X <:greentick:925014592059490306>  \n\nTarget 1: $0.9651 (30%)\nTarget 2: $1.0092 (77%)\n\nRisking 2.5% to gain 7.7% on this trade (x10)\n\nStoploss: $0.9111\n\nhttps://www.tradingview.com/x/gHvdt8G4/",
-      "hash": "8901dca957bd95e8fd3ecda5cb2e61db258c0a14"
-    },
-    {
-      "symbol": "DOGE",
-      "entryPrice": 0.084,
-      "targetPrice": 0.0811,
-      "stopLoss": 0.0865,
-      "tradingType": "SELL",
-      "timestamp": "2022-10-28T18:49:01.727000+00:00",
-      "rawContent": "$DOGE\n(SELL/SHORT) \n\n@everyone \n\nEntry: $0.0840\n(Enter Now)\n\nLeverage: cross 10X <:greentick:925014592059490306>  \n\nTarget 1: $0.0811 (36%)\nTarget 2: $0.0754 (102%)\n\nRisking 2.6% to gain 10.2% on this trade (x10)\n\nStoploss: $0.0865\n\nhttps://www.tradingview.com/x/EAzzXTps/",
-      "hash": "f5b22d70c98ba9ac9a2ad0d8b44e048a3e352e3b"
-    },
-    {
-      "symbol": "SOL",
-      "entryPrice": 33.26,
-      "targetPrice": 34.21,
-      "stopLoss": 32.5,
-      "tradingType": "BUY",
-      "timestamp": "2022-10-29T17:19:44.683000+00:00",
-      "rawContent": "$SOL\n(BUY/LONG) \n\n@everyone \n\nEntry: $33.26\n(Enter Now)\n\nLeverage: cross 10X <:greentick:925014592059490306>  \n\nTarget 1: $34.21 (30%)\nTarget 2: $35.12 (56%)\n\nRisking 2.2% to gain 5.6% on this trade (x10)\n\nStoploss: $32.50\n\nhttps://www.tradingview.com/x/tS8lcyP7/",
-      "hash": "2ebda46ee66b0daf0f596cf667b54712d21ecdfc"
-    },
-    {
-      "symbol": "DYDX",
-      "entryPrice": 1.739,
-      "targetPrice": 1.679,
-      "stopLoss": 1.788,
-      "tradingType": "SELL",
-      "timestamp": "2022-10-30T11:28:45.089000+00:00",
-      "rawContent": "$DYDX\n(SELL/SHORT) \n\n@everyone \n\nEntry: $1.739\n(Enter Now)\n\nLeverage: cross 10X <:greentick:925014592059490306>  \n\nTarget 1: $1.679 (35%)\nTarget 2: $1.604 (77%)\n\nRisking 2.6% to gain 7.7% on this trade (x10)\n\nStoploss: $1.788\n\nhttps://www.tradingview.com/x/zDCAimtg/",
-      "hash": "3bf13947b85e9574e36fbc239e660e29ae21672c"
-    },
-    {
-      "symbol": "DOGE",
-      "entryPrice": 0.1235,
-      "targetPrice": 0.129,
-      "stopLoss": 0.119,
-      "tradingType": "BUY",
-      "timestamp": "2022-10-31T11:10:13.265000+00:00",
-      "rawContent": "$DOGE\n(BUY/LONG) \n\n@everyone \n\nEntry: $0.1235\n(Enter Now)\n\nLeverage: cross 10X <:greentick:925014592059490306>   \n\nTarget 1: $0.129 (55%)\nTarget 2: $0.1389 (125%)\n\nRisking 2.6% to gain 12.5% on this trade (x10)\n\nStoploss: $0.1190",
-      "hash": "68d309c6db420a85f3e4c9bc3f0b70881bb4ea66"
-    },
-    {
-      "symbol": "BTC",
-      "entryPrice": 20.42,
-      "targetPrice": 19.7,
-      "stopLoss": 20.71,
-      "tradingType": "SELL",
-      "timestamp": "2022-11-01T17:01:57.385000+00:00",
-      "rawContent": "$BTC\n(SELL/SHORT) \n\n@everyone \n\nEntry: $20,420\n(Enter Now)\n\nLeverage: cross 20x<:greentick:925014592059490306>   \n\nTarget 1: $19,700 (71%)\n\nRisking 1.2% to gain 3.6% on this trade (x20)\n\nStoploss: $20,710",
-      "hash": "f94692cbe0982ce21e972abcda01e28469579044"
-    },
-    {
-      "symbol": "DOGE",
-      "entryPrice": 0.1367,
-      "targetPrice": 0.1446,
-      "stopLoss": 0.1281,
-      "tradingType": "BUY",
-      "timestamp": "2022-11-02T18:07:53.490000+00:00",
-      "rawContent": "$DOGE\n(BUY/LONG) \n\n@everyone \n\nEntry: 0.1367\n(Enter Now)\n\nLeverage: cross 10x<:greentick:925014592059490306>   \n\nTarget 1: 0.1446 (70%)\nTarget 2: 0.1649 (220%)\n\nRisking 2.7% to gain 22% on this trade (x20)\n\nStoploss: 0.1281",
-      "hash": "3f30a0df03558c4977a776accea04674be1fd88e"
-    },
-    {
-      "symbol": "BTC",
-      "entryPrice": 20.78,
-      "targetPrice": 21.77,
-      "stopLoss": 20.47,
-      "tradingType": "BUY",
-      "timestamp": "2022-11-07T12:13:41.658000+00:00",
-      "rawContent": "$BTC\n(BUY/LONG) \n\n@everyone \n\nEntry: $20,780\n(Enter Now)\n\nLeverage: cross 10x <:greentick:925014592059490306>   \n\nTarget 1: $21,770 (47%)\n\nRisking 1.50% to gain 4.7 on this trade (x10)\n\nStoploss:  $20,470\n\nhttps://www.tradingview.com/x/lCRsXEKZ/",
-      "hash": "3fb3ad12b713da1114164964729f68e86857d179"
-    },
-    {
-      "symbol": "SOL",
-      "entryPrice": 27.76,
-      "targetPrice": 25.01,
-      "stopLoss": 28.75,
-      "tradingType": "SELL",
-      "timestamp": "2022-11-08T13:57:46.987000+00:00",
-      "rawContent": "$SOL\n(SELL/SHORT) \n\n@everyone \n\nEntry: $27.76\n(Enter Now)\n\nLeverage: cross 10x <:greentick:925014592059490306>   \n\nTarget 1: $25.01 (110%)\n\nRisking 3% to gain 11% on this trade (x10)\n\nStoploss:  $28.75",
-      "hash": "7401ec113e6e7d615d6ce9509282ccbcec4df9ff"
-    },
-    {
-      "symbol": "DOGE",
-      "entryPrice": 0.1132,
-      "targetPrice": 0.0977,
-      "stopLoss": 0.1171,
-      "tradingType": "SELL",
-      "timestamp": "2022-11-08T16:44:00.793000+00:00",
-      "rawContent": "$DOGE\n(SELL/SHORT) \n\n@everyone \n\nEntry: $0.1132\n(Enter Now)\n\nLeverage: cross 10x <:greentick:925014592059490306>   \n\nTarget 1: $0.0977 (140%)\n\nRisking 3.5% to gain 14% on this trade (x10)\n\nStoploss:  $0.1171\n\nhttps://www.tradingview.com/x/NYj0AzBp/",
-      "hash": "73157ce9c2c46954ed76f66019f8d8f21ac54b06"
-    },
-    {
-      "symbol": "CRV",
-      "entryPrice": 0.854,
-      "targetPrice": 0.91,
-      "stopLoss": 0.835,
-      "tradingType": "BUY",
-      "timestamp": "2022-11-08T18:11:52.968000+00:00",
-      "rawContent": "$CRV\n(BUY/LONG) \n\n@everyone \n\nEntry: $0.854\n(Enter Now)\n\nLeverage: cross 10x <:greentick:925014592059490306>   \n\nTarget 1: $0.910 (65%)\n\nRisking 2% to gain 6.5% on this trade (x10)\n\nStoploss:  $0.835\n\nhttps://www.tradingview.com/x/Wy48XRVS/",
-      "hash": "afcbb929f561a4ca0e9d50a877b2bcb87956d376"
-    },
-    {
-      "symbol": "ETH",
-      "entryPrice": 1180,
-      "targetPrice": 1004.5,
-      "stopLoss": 1225.65,
-      "tradingType": "SELL",
-      "timestamp": "2022-11-10T10:53:41.292000+00:00",
-      "rawContent": "$ETH\n(SELL/SHORT) \n\n@everyone \n\nEntry: $1180.00\n(Enter Now)\n\nLeverage: cross 10x <:greentick:925014592059490306>   \n\nTarget 1: $1004.50 (145%)\n\nRisking 3.5% to gain 14% on this trade (x10)\n\nStoploss:  $1225.65\n\nhttps://www.tradingview.com/x/5kybwTQS/",
-      "hash": "4538b4e395a238e913548f82ce2a9a35d42bb714"
-    },
-    {
       "symbol": "BTC",
       "entryPrice": 17410,
       "targetPrice": 18410,
@@ -168,6 +8,9 @@
       "tradingType": "BUY",
       "timestamp": "2022-11-10T14:06:49.613000+00:00",
       "rawContent": "$BTC\n(BUY/LONG) Scalp \n\n@everyone \n\nEntry: $17410\n(Enter Now)\n\nLeverage: cross 10x <:greentick:925014592059490306>   \n\nTarget 1: $18410 (65%)\n\nRisking 1.8% to gain 6.5% on this trade (x10)\n\nStoploss:  $17015 (1.8%)",
+      "isPlaced": false,
+      "isSended": false,
+      "profit": null,
       "hash": "a41d55902a91ea45f5b4a4a39f04f2c5dc563033"
     },
     {
@@ -178,6 +21,9 @@
       "tradingType": "BUY",
       "timestamp": "2022-11-11T13:26:21.489000+00:00",
       "rawContent": "$REEF\n(BUY/LONG) \n\n@everyone \n\nEntry: $0.003717\n(Enter Now)\n\nLeverage: cross 10x <:greentick:925014592059490306>   \n\nTarget 1: $0.004039 (90%)\n\nRisking 2.8% to gain 9.0% on this trade (x10)\n\nStoploss:  $0.003604 (2.8%)\n\nhttps://www.tradingview.com/x/n4BzCspd/",
+      "isPlaced": false,
+      "isSended": false,
+      "profit": null,
       "hash": "cabd729d30e84ad8824039ceb01c2002066067d7"
     },
     {
@@ -188,6 +34,9 @@
       "tradingType": "BUY",
       "timestamp": "2022-11-12T14:35:45.905000+00:00",
       "rawContent": "$DOT\n(BUY/LONG) \n\n@everyone \n\nEntry: $5.728\n(Enter Now)\n\nLeverage: cross 10x <:greentick:925014592059490306>   \n\nTarget 1: $6.600 (155%)\n\nRisking 2.8% to gain 15% on this trade (x10)\n\nStoploss:  $5.554 (2.8%)\n\nhttps://www.tradingview.com/x/kXqGOfsR/",
+      "isPlaced": false,
+      "isSended": false,
+      "profit": null,
       "hash": "4fbf5fe0975a36469e114471cf3499a5e5e4f3ca"
     },
     {
@@ -198,6 +47,9 @@
       "tradingType": "SELL",
       "timestamp": "2022-11-13T10:00:14.867000+00:00",
       "rawContent": "$CRO\n(SELL/SHORT) \n\n@everyone \n\nEntry: $0.0647\n(Enter Now)\n\nLeverage: cross 10x <:greentick:925014592059490306>   \n\nTarget 1: $0.0569 (125%)\n\nRisking 4% to gain 12.5% on this trade (x10)\n\nStoploss:  $0.0678 (4%)",
+      "isPlaced": false,
+      "isSended": false,
+      "profit": null,
       "hash": "13eff4a6c9ef16882cb137efb28a2cd58124cfc9"
     },
     {
@@ -208,6 +60,9 @@
       "tradingType": "SELL",
       "timestamp": "2022-11-13T15:01:31.995000+00:00",
       "rawContent": "$BTC\n(SELL/SHORT) \n\n@everyone \n\nEntry: $16,645\n(Enter Now)\n\nLeverage: cross 10x <:greentick:925014592059490306>   \n\nTarget 1: $15, 590 (63%)\nTarget 2: $14,250 (143%)\n\nRisking 4% to gain 14.3% on this trade (x10)\n\nStoploss:  $17,320 (4%)\n\nhttps://www.tradingview.com/x/Q0s4zHF7/",
+      "isPlaced": false,
+      "isSended": false,
+      "profit": null,
       "hash": "60be63530de6e827e02f4335b870d1487d560cb6"
     }
   ]

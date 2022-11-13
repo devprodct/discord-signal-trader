@@ -36,6 +36,9 @@ export const getJSONMessages = async () => {
 
         return {
             ...result,
+            isPlaced: false,
+            isSended: false,
+            profit: null,
             hash: hash(result)
         }
     });
