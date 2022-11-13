@@ -5,7 +5,8 @@ const getEntryPrice = (str) => {
     let entryPrice = stringExtractor(str, 'Entry:', '\\n')
 
     if (entryPrice) {
-        entryPrice = +entryPrice.trim().replace('$', '');
+        entryPrice = entryPrice.trim();
+        entryPrice
     }
 
     return entryPrice;
