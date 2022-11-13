@@ -7,7 +7,7 @@ const app = async () => {
     // Get Messages from Channel 
     const jsonMessages = await getJSONMessages();
 
-    // Write and Check if record exist 
+    // Write and check if record exist 
     jsonMessages.map(item => {
         addRecord(item);
     })
