@@ -1,14 +1,10 @@
-const axios = require('axios');
+import axios from 'axios';
 
-const axiosInstance = axios.create({
-    baseURL: process.env.BASE_URL,
-    timeout: 12000,
+export const axiosInstance = axios.create({
+    baseURL: process.env.BASE_DISCORD_URL,
+    timeout: 1200,
     withCredentials: true,
     headers: {
         'authorization' : process.env.WEB_DISCORD_TOKEN
     }
 });
-
-module.exports = {
-    axiosInstance
-};
