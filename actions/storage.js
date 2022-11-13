@@ -8,22 +8,28 @@ class LowWithLodash extends Low {
     chain = lodash.chain(this).get('data');
 }
 
-const __dirname     = dirname(fileURLToPath(import.meta.url));
-const file          = join(__dirname, process.env.FILE_PATH)
-const adapter       = new JSONFile(file)
-const db            = new LowWithLodash(adapter)
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const file = join(__dirname, process.env.FILE_PATH)
+const adapter = new JSONFile(file)
+const db = new LowWithLodash(adapter)
 
-db.data ||= { records: [] }
-
-await db.write()
-
-const writeDB = async () => await db.write()
-
-export const addRecord = async (record) => {
-    db.data.records.push(record)
-    writeDB()
+try {
+    await db.read();
+} catch (err) {
+    db.data ||= { records: [] }
+    await db.write();
 }
 
-export const addRecords = async (items) => {
-    items.map(item => addRecord(item));
+const writeDB = async () => await db.write()
+const isExist = (record) => db.chain.get('records').find({ hash: record.hash }).value()
+
+export const addRecord = async (record) => {
+    if (!isExist(record)) {
+        db.data.records.push(record)
+        writeDB()
+    }
+}
+
+export const findRecord = async (record) => {
+    
 }

@@ -18,24 +18,21 @@ export const getJSONMessages = async () => {
 
     const parsed = content.map(item => {
 
-        const symbol        = getSymbol(item.content);
-        const entryPrice    = getEntryPrice(item.content);
-        const targetPrice   = getTargetPrice(item.content);
-        const stopLoss      = getStopLossPrice(item.content);
-        const tradingType   = getTradingType(item.content);
-
         const result = {
-            symbol,
-            entryPrice,
-            targetPrice,
-            stopLoss,
-            tradingType,
+            symbol: getSymbol(item.content),
+            entryPrice: getEntryPrice(item.content),
+            targetPrice: getTargetPrice(item.content),
+            stopLoss: getStopLossPrice(item.content),
+            tradingType: getTradingType(item.content),
             timestamp: item.timestamp,
             rawContent: item.content
         }
 
         return {
             ...result,
+            isPlaced: false,
+            isSended: false,
+            profit: null,
             hash: hash(result)
         }
     });
