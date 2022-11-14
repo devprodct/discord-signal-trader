@@ -1,6 +1,7 @@
 import "./config.js";
 import { getJSONMessages } from './actions/discord.js';
 import { addRecord } from "./actions/storage.js";
+import { setOrder, setupOrders } from "./api/bybit/bybit.js";
 
 const app = async () => {
 
@@ -13,6 +14,7 @@ const app = async () => {
     })
 
     // Get positions from exchange
+    setupOrders()
 
     // Place order 
 
@@ -20,4 +22,7 @@ const app = async () => {
 }
 
 // set interval for 1 minute
-setInterval(app, 60000)
+// setInterval(app, 60000)
+
+// run single time
+app();

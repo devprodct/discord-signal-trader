@@ -9,3 +9,16 @@ const client = new LinearClient({
 
 export const getPositionList = async () => client.getPosition();
 export const setOrder = async (order) => client.placeActiveOrder(order);
+
+export const setupOrders = async (items) => {
+    // setOrder({
+    //     symbol: "BTCUSDT",
+    //     side: "Sell",
+    //     order_type: "Limit",
+    //     qty: 0.001,
+    //     price: 16332,
+    //     time_in_force: "GoodTillCancel",
+    //     reduce_only: false,
+    //     close_on_trigger: false
+    // })
+}
