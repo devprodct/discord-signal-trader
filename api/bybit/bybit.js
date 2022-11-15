@@ -1,5 +1,6 @@
 import { LinearClient } from 'bybit-api';
-import { findRecord } from '../../actions/storage.js';
+import { findRecordByHash } from '../../actions/storage.js';
+import { DateTime } from 'luxon';
 
 const client = new LinearClient({
     key: process.env.API_KEY,
@@ -9,22 +10,8 @@ const client = new LinearClient({
 
 export const getPositionList    = async () => client.getPosition();
 export const setOrder           = async (order) => client.placeActiveOrder(order);
-export const checkTrade         = (newTrade) => {
-
-    const record = findRecord(newTrade.hash)
-
-    if (record.isPlaced) {
-        return false;
-    }
-
-    return record;
-}
 
 export const processOrders = async (items) => {
-
-    items.map(item => {
-        checkTrade(item);
-    })
 
     // setOrder({
     //     symbol: "BTCUSDT",

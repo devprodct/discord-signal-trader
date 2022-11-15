@@ -1,5 +1,4 @@
 import { getMessagesFromDiscord } from '../api/discord/discord.js';
-import hash from 'object-hash';
 import {
     getEntryPrice,
     getStopLossPrice,
@@ -7,6 +6,18 @@ import {
     getTargetPrice,
     getTradingType
 } from '../helpers/utilities.js'
+
+import { DateTime, Interval } from 'luxon';
+import { testJson } from '../storage/test.js';
+
+export const filterLastMessages = (record) => {
+
+    const now = DateTime.fromISO(DateTime.now());
+    const recordDate = DateTime.fromISO(record.timestamp);
+    const diff = Interval.fromDateTimes(recordDate, now);
+
+    return diff.length('minutes') < 5;
+}
 
 export const getJSONMessages = async () => {
 
@@ -16,7 +27,7 @@ export const getJSONMessages = async () => {
         return item.content.match(/SELL/g) || item.content.match(/BUY/);
     })
 
-    const parsed = content.map(item => {
+    const records = content.map(item => {
 
         const result = {
             symbol: getSymbol(item.content),
@@ -29,13 +40,9 @@ export const getJSONMessages = async () => {
         }
 
         return {
-            ...result,
-            isPlaced: false,
-            isSended: false,
-            profit: null,
-            hash: hash(result)
+            ...result
         }
     });
 
-    return parsed;
+    return testJson.filter(filterLastMessages);
 }

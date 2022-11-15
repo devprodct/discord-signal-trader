@@ -1,20 +1,15 @@
 import "./config.js";
 import { getJSONMessages } from './actions/discord.js';
 import { addRecord } from "./actions/storage.js";
-import { setOrder, setupOrders } from "./api/bybit/bybit.js";
+import { setOrder, processOrders } from "./api/bybit/bybit.js";
 
 const app = async () => {
 
     // Get Messages from Channel 
-    const jsonMessages = await getJSONMessages();
-
-    // Write and check if record exist 
-    jsonMessages.map(item => {
-        addRecord(item);
-    })
+    const lastMessages = await getJSONMessages();
 
     // Get positions from exchange
-    processOrders(jsonMessages)
+    processOrders(lastMessages)
 
     // Place order 
 
