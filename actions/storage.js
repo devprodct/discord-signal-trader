@@ -30,6 +30,6 @@ export const addRecord = async (record) => {
     }
 }
 
-export const findRecord = async (record) => {
-    
+export const findRecordByHash = async (hash) => {
+    return db.chain.get('records').find({ hash }).value();
 }

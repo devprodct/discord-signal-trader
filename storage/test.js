@@ -1,5 +1,4 @@
-{
-  "records": [
+export const testJson = [
     {
       "symbol": "BTC",
       "entryPrice": 17410,
@@ -71,12 +70,11 @@
       "targetPrice": 0.0997,
       "stopLoss": 0.0897,
       "tradingType": "BUY",
-      "timestamp": "2022-11-15T12:26:28.903000+00:00",
+      "timestamp": "2022-11-15T23:07:00.903000+00:00",
       "rawContent": "$XLM\n(BUY/LONG) \n\n@everyone \n\nEntry: $0.0921\n(Enter Now)\n\nLeverage: cross 10x <:greentick:925014592059490306>   \n\nTarget 1: $0.0997 (82%)\nTarget 2: $0.1051 (140%)\n\nRisking 2.7% to gain 14% on this trade (x10)\n\nStoploss:  $0.0897 (2.7%)\n\nhttps://www.tradingview.com/x/aRH51cz8/",
       "isPlaced": false,
       "isSended": false,
       "profit": null,
       "hash": "c5631a0b36c2fb6e63082e875ab6f02ac88a321a"
     }
-  ]
-}
+]
