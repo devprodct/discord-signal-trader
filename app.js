@@ -14,7 +14,7 @@ const app = async () => {
     })
 
     // Get positions from exchange
-    setupOrders()
+    processOrders(jsonMessages)
 
     // Place order 
 
