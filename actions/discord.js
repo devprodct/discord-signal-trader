@@ -8,7 +8,6 @@ import {
 } from '../helpers/utilities.js'
 
 import { DateTime, Interval } from 'luxon';
-import { testJson } from '../storage/test.js';
 
 export const filterLastMessages = (record) => {
 
@@ -44,5 +43,5 @@ export const getJSONMessages = async () => {
         }
     });
 
-    return testJson.filter(filterLastMessages);
+    return records.filter(filterLastMessages);
 }

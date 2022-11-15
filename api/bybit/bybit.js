@@ -11,16 +11,28 @@ const client = new LinearClient({
 export const getPositionList    = async () => client.getPosition();
 export const setOrder           = async (order) => client.placeActiveOrder(order);
 
+export const generateOrderInfo = (trade) => {
+
+    return {
+        symbol: `${trade.symbol}USDT`,
+        side: `${trade.tradingType}`,
+        order_type: `Limit`,
+        qty: 0.01, // need to calculate from api 
+        price: `${trade.entryPrice}`,
+        time_in_force: 'GoodTillCancel',
+        reduce_only: false,
+        close_on_trigger: false
+    }
+}
+
 export const processOrders = async (items) => {
 
-    // setOrder({
-    //     symbol: "BTCUSDT",
-    //     side: "Sell",
-    //     order_type: "Limit",
-    //     qty: 0.001,
-    //     price: 16332,
-    //     time_in_force: "GoodTillCancel",
-    //     reduce_only: false,
-    //     close_on_trigger: false
-    // })
+    if (!items.length) return;
+
+    items.map(item => {
+
+        setOrder(
+            generateOrderInfo(item)
+        )
+    })
 }
