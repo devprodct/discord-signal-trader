@@ -5,31 +5,23 @@ import {
     getSymbol,
     getTargetPrice,
     getTradingType
-} from '../helpers/utilities.js'
+} from '../helpers/strings.js'
 
-import { DateTime, Interval } from 'luxon';
-
-export const filterLastMessages = (record) => {
-
-    const now = DateTime.fromISO(DateTime.now());
-    const recordDate = DateTime.fromISO(record.timestamp);
-    const diff = Interval.fromDateTimes(recordDate, now);
-
-    return diff.length('minutes') < 5;
-}
+import { filterLastMessages, filterSignals } from '../helpers/filters.js';
 
 export const getJSONMessages = async () => {
 
     const rawMessages = await getMessagesFromDiscord();
 
-    const content = rawMessages.data.reverse().filter(item => {
-        return item.content.match(/SELL/g) || item.content.match(/BUY/);
-    })
+    const content = rawMessages.data.filter(filterSignals)
 
-    const records = content.map(item => {
+    const records = content
+                        .filter(filterLastMessages)
+                        .map(item => {
 
-        const result = {
+        return {
             symbol: getSymbol(item.content),
+            exchangeSymbol: `${getSymbol(item.content)}USDT`,
             entryPrice: getEntryPrice(item.content),
             targetPrice: getTargetPrice(item.content),
             stopLoss: getStopLossPrice(item.content),
@@ -37,11 +29,7 @@ export const getJSONMessages = async () => {
             timestamp: item.timestamp,
             rawContent: item.content
         }
-
-        return {
-            ...result
-        }
     });
 
-    return records.filter(filterLastMessages);
+    return records;
 }

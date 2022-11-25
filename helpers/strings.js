@@ -28,8 +28,7 @@ export const getTargetPrice = (str) => {
     let targetPrice = stringExtractor(str, 'Target', '\\n')
 
     if (targetPrice) {
-        targetPrice = targetPrice.replace(/([(].*?[)])/g, '');
-        targetPrice = targetPrice.trim();
+        targetPrice = targetPrice.replace(/([(].*?[)])/g, '').trim();
         targetPrice = targetPrice.replace('$', '');
         targetPrice = parseFloat(targetPrice.split(' ')[1].replace(',', '.'))
     }

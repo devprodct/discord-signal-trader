@@ -12,7 +12,7 @@ const app = async () => {
 }
 
 // set interval for 1 minute
-setInterval(app, 60000)
+//setInterval(app, 60000)
 
 // run single time
-// app();
+app();
