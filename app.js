@@ -1,6 +1,6 @@
 import "./config.js";
 import { getJSONMessages } from './actions/discord.js';
-import { processOrders } from "./api/bybit/bybit.js";
+import { processOrders } from "./actions/bybit.js";
 
 const app = async () => {
 
@@ -12,7 +12,7 @@ const app = async () => {
 }
 
 // set interval for 1 minute
-setInterval(app, 60000)
+//setInterval(app, 60000)
 
 // run single time
-// app();
+app();
