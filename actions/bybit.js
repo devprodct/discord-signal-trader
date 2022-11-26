@@ -1,15 +1,17 @@
 import { getPriceUSDT, getPosition, setOrder } from "../api/bybit.js";
 import { filterOrders } from "../helpers/filters.js";
 
-export const generateOrder = async (trade, usdt) => {
+export const generateOrder = async (trade, usdt, leverage) => {
 
     const price = await getPriceUSDT(trade.exchangeSymbol);
+
+    const qty = ((usdt / price) * leverage).toFixed(4)
 
     return {
         symbol: trade.exchangeSymbol,
         side: `${trade.tradingType}`,
         order_type: `Market`,
-        qty: usdt / price,
+        qty, 
         price: trade.entryPrice,
         time_in_force: 'GoodTillCancel',
         reduce_only: false,
@@ -33,8 +35,8 @@ export const processOrders = async (items) => {
         const order = await isCurrentOrderExist(item.exchangeSymbol);
 
         if (!order) {
-            const orderInfo = generateOrder(item, 5);
-            setOrder(orderInfo);
+            const orderInfo = await generateOrder(item, 5, 5);
+            await setOrder(orderInfo)
         }
 
     })
