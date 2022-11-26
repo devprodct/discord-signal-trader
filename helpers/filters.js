@@ -12,3 +12,5 @@ export const filterLastMessages = (record) => {
 export const filterSignals = (item) => {
     return item.content.match(/SELL/g) || item.content.match(/BUY/);
 }
+
+export const filterOrders = (order) => order.data.size > 0

@@ -15,4 +15,6 @@ export const getPriceUSDT = async (symbol) => {
     return response.result.length !== 0 && +response.result[0].price
 }
 
-export const getOrders = async () => client.getActiveOrderList();
+export const getPosition = async (symbol) => client.getPosition();
+
+export const queryOrder = async (symbol) => client.queryActiveOrder({ symbol });

@@ -1,4 +1,4 @@
-import { getMessagesFromDiscord } from '../api/discord/discord.js';
+import { getMessagesFromDiscord } from '../api/discord.js';
 import {
     getEntryPrice,
     getStopLossPrice,
