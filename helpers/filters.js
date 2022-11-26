@@ -6,7 +6,7 @@ export const filterLastMessages = (record) => {
     const recordDate = DateTime.fromISO(record.timestamp);
     const diff = Interval.fromDateTimes(recordDate, now);
 
-    return diff.length('minutes') < 7000;
+    return diff.length('minutes') < 5;
 }
 
 export const filterSignals = (item) => {
