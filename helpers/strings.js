@@ -48,5 +48,8 @@ export const getStopLossPrice = (str) => {
 }
 
 export const getTradingType = (str) => {
-    return (str.match(/SELL/g) || str.match(/BUY/))[0];
+    let result = (str.match(/SELL/g) || str.match(/BUY/))[0];
+    result = result.toLowerCase();
+    
+    return result.charAt(0).toUpperCase() + result.slice(1);
 }
