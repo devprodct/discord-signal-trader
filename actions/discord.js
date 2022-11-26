@@ -27,7 +27,8 @@ export const getJSONMessages = async () => {
             stopLoss: getStopLossPrice(item.content),
             tradingType: getTradingType(item.content),
             timestamp: item.timestamp,
-            rawContent: item.content
+            rawContent: item.content,
+            isPlaced: false
         }
     });
 

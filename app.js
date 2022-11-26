@@ -1,6 +1,6 @@
 import "./config.js";
 import { getJSONMessages } from './actions/discord.js';
-import { processOrders } from "./api/bybit/bybit.js";
+import { processOrders } from "./actions/bybit.js";
 
 const app = async () => {
 
