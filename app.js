@@ -9,8 +9,6 @@ const app = async () => {
 
     // Get positions from exchange
     processOrders(lastMessages)
-
-    console.log('Check.. ')
 }
 
 // set interval for 1 minute

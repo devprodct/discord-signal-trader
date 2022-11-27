@@ -32,6 +32,8 @@ export const processOrders = async (items) => {
 
     items.map(async (item) => {
 
+        console.log(item);
+
         const order = await isCurrentOrderExist(item.exchangeSymbol);
 
         if (!order) {
